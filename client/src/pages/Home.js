@@ -8,10 +8,17 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="bg-gradient-to-br from-green-500 to-green-600 text-white py-12 sm:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Welcome to WasteMap</h1>
           <p className="text-lg sm:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+=======
+      <section className="bg-gradient-to-br from-green-500 to-green-600 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl font-bold mb-6">Welcome to WasteMap</h1>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
             Sustainable waste management for cleaner cities. Join us in supporting SDG 11 and 12.
           </p>
           {currentUser ? (

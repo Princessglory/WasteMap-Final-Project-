@@ -113,8 +113,13 @@ const Dashboard = () => {
           ) : (
             <div className="divide-y">
               {recentPickups.map(pickup => (
+<<<<<<< HEAD
                 <div key={pickup._id} className="p-6 flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
                   <div className="flex-1">
+=======
+                <div key={pickup._id} className="p-6 flex justify-between items-center">
+                  <div>
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
                     <h4 className="font-semibold text-gray-900 capitalize">
                       {pickup.wasteType} - {pickup.quantity}
                     </h4>
@@ -125,7 +130,11 @@ const Dashboard = () => {
                       Scheduled: {new Date(pickup.scheduledDate).toLocaleDateString()}
                     </p>
                   </div>
+<<<<<<< HEAD
                   <div className="sm:ml-4">
+=======
+                  <div>
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
                     {getStatusBadge(pickup.status)}
                   </div>
                 </div>

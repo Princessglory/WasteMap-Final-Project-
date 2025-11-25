@@ -209,12 +209,21 @@ const AdminDashboard = () => {
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h2>
                 <div className="space-y-4">
                   {recentActivity.map((pickup) => (
+<<<<<<< HEAD
                     <div key={pickup._id} className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-gray-50 rounded-lg space-y-2 sm:space-y-0">
                       <div className="flex items-center space-x-4">
                         <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                           <span className="text-green-600 text-sm">♻️</span>
                         </div>
                         <div className="min-w-0 flex-1">
+=======
+                    <div key={pickup._id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                          <span className="text-green-600 text-sm">♻️</span>
+                        </div>
+                        <div>
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
                           <p className="font-medium text-gray-900">
                             {pickup.user?.name} requested {pickup.wasteType} pickup
                           </p>
@@ -223,7 +232,11 @@ const AdminDashboard = () => {
                           </p>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <div className="flex items-center space-x-2 sm:ml-4">
+=======
+                      <div className="flex items-center space-x-2">
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
                         {getStatusBadge(pickup.status)}
                         {pickup.assignedCollector && (
                           <span className="text-sm text-gray-500">

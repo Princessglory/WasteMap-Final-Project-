@@ -21,7 +21,11 @@ const PickupHistory = () => {
     try {
       const response = await apiClient.get('/api/pickups/my-pickups');
       const pickupData = response.data;
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
       setPickups(pickupData);
     } catch (error) {
       console.error('Error fetching pickup history:', error);
@@ -52,6 +56,7 @@ const PickupHistory = () => {
     setFilteredPickups(filtered);
   };
 
+<<<<<<< HEAD
   const cancelPickup = async (pickupId) => {
     try {
       await apiClient.patch(`/api/pickups/${pickupId}/status`, { status: 'cancelled' });
@@ -64,6 +69,8 @@ const PickupHistory = () => {
     }
   };
 
+=======
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
   const getStatusBadge = (status) => {
     const statusClasses = {
       pending: 'bg-amber-50 text-amber-800 border border-amber-200',
@@ -322,10 +329,14 @@ const PickupHistory = () => {
                     )}
                     
                     {pickup.status === 'pending' && (
+<<<<<<< HEAD
                       <button
                         onClick={() => cancelPickup(pickup._id)}
                         className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 shadow-lg shadow-red-200"
                       >
+=======
+                      <button className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 shadow-lg shadow-red-200">
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
                         🗑️ Cancel Request
                       </button>
                     )}

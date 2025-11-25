@@ -1,24 +1,37 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import React from 'react';
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
   const { currentUser, logout } = useAuth();
   const navigate = useNavigate();
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
+=======
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
 
   const handleLogout = () => {
     logout();
     navigate('/');
+<<<<<<< HEAD
     setIsOpen(false);
   };
 
   const closeMenu = () => setIsOpen(false);
 
+=======
+  };
+
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
+<<<<<<< HEAD
           <Link to="/" className="flex items-center space-x-2 text-xl sm:text-2xl font-bold text-green-600" onClick={closeMenu}>
             <span>♻️</span>
             <span>WasteMap</span>
@@ -26,6 +39,14 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
+=======
+          <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-green-600">
+            <span>♻️</span>
+            <span>WasteMap</span>
+          </Link>
+          
+          <div className="flex items-center space-x-6">
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
             {currentUser ? (
               <>
                 <Link to="/dashboard" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
@@ -47,10 +68,17 @@ const Navbar = () => {
                     Admin
                   </Link>
                 ) : null}
+<<<<<<< HEAD
                 <span className="text-gray-600 text-sm">Welcome, {currentUser.name}</span>
                 <button
                   onClick={handleLogout}
                   className="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-lg transition-colors duration-200 text-sm"
+=======
+                <span className="text-gray-600">Welcome, {currentUser.name}</span>
+                <button 
+                  onClick={handleLogout}
+                  className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
                 >
                   Logout
                 </button>
@@ -66,6 +94,7 @@ const Navbar = () => {
               </>
             )}
           </div>
+<<<<<<< HEAD
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -132,6 +161,9 @@ const Navbar = () => {
             </div>
           </div>
         )}
+=======
+        </div>
+>>>>>>> cdf9d9db283b2e370937b1df0817b724d509a289
       </div>
     </nav>
   );
