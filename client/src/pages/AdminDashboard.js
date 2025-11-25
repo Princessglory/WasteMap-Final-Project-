@@ -209,12 +209,12 @@ const AdminDashboard = () => {
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h2>
                 <div className="space-y-4">
                   {recentActivity.map((pickup) => (
-                    <div key={pickup._id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div key={pickup._id} className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-gray-50 rounded-lg space-y-2 sm:space-y-0">
                       <div className="flex items-center space-x-4">
-                        <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                        <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                           <span className="text-green-600 text-sm">♻️</span>
                         </div>
-                        <div>
+                        <div className="min-w-0 flex-1">
                           <p className="font-medium text-gray-900">
                             {pickup.user?.name} requested {pickup.wasteType} pickup
                           </p>
@@ -223,7 +223,7 @@ const AdminDashboard = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center space-x-2 sm:ml-4">
                         {getStatusBadge(pickup.status)}
                         {pickup.assignedCollector && (
                           <span className="text-sm text-gray-500">

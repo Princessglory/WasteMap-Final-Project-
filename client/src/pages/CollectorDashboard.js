@@ -148,41 +148,41 @@ const CollectorDashboard = () => {
 
   const renderPickupCard = (pickup, tab) => (
     <div key={pickup._id} className="bg-white rounded-lg shadow-sm border p-6 mb-4">
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start space-y-4 sm:space-y-0">
         <div className="flex-1">
-          <div className="flex items-center space-x-4 mb-3">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0 mb-3">
             <h3 className="text-lg font-semibold text-gray-900 capitalize">
               {pickup.wasteType} - {pickup.quantity}
             </h3>
             {getStatusBadge(pickup.status)}
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
             <div>
-              <strong>Location:</strong> 
+              <strong>Location:</strong>
               <p>{pickup.address.street}, {pickup.address.city}</p>
               <p>{pickup.address.state} {pickup.address.zipCode}</p>
             </div>
-            
+
             <div>
               <strong>Customer:</strong>
               <p>{pickup.user?.name || 'N/A'}</p>
               <p>{pickup.user?.phone || 'No phone'}</p>
             </div>
-            
+
             <div>
               <strong>Scheduled:</strong>
               <p>{new Date(pickup.scheduledDate).toLocaleString()}</p>
             </div>
-            
+
             <div>
               <strong>Description:</strong>
               <p className="truncate">{pickup.description || 'No description'}</p>
             </div>
           </div>
         </div>
-        
-        <div className="ml-4">
+
+        <div className="sm:ml-4 flex-shrink-0">
           {getActionButtons(pickup, tab)}
         </div>
       </div>
